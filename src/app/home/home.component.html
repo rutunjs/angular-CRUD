@@ -1,5 +1,15 @@
 <div class="container ">
   <p>
-    this is home page 
+    TOtal items ({{itemCount}})
   </p>
+  <div>
+    <input type="text" name="item" class="item" [(ngModel)]="goalText" > <br>
+    <span> {{goalText}}  </span><br>
+    <div *ngFor="let goal of goals">
+      {{goal}}
+    </div> <br>
+    <input type="submit" [value]="btnText" class="btn" (click)="addItem()" >
+
+    
+  </div>
 </div>
